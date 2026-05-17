@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#1c1b1a",
+                      "primary": "#000000",
+                      "inverse-primary": "#c8c6c5",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-primary-container": "#858383",
+                      "tertiary-fixed-dim": "#cac6c3",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#1c1b1b",
+                      "on-surface-variant": "#444748",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "on-secondary-fixed": "#261900",
+                      "secondary-container": "#fed488",
+                      "tertiary-container": "#1c1b1a",
+                      "surface-dim": "#ddd9d8",
+                      "on-primary-fixed-variant": "#474646",
+                      "surface-variant": "#e5e2e1",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#484645",
+                      "on-background": "#1c1b1b",
+                      "outline-variant": "#c4c7c7",
+                      "outline": "#747878",
+                      "tertiary-fixed": "#e6e1df",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f4f0ef",
+                      "surface-container-high": "#ebe7e6",
+                      "surface": "#fdf8f8",
+                      "on-tertiary-container": "#868381",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed": "#1c1b1b",
+                      "surface-container": "#f1edec",
+                      "on-secondary": "#ffffff",
+                      "inverse-surface": "#313030",
+                      "tertiary": "#000000",
+                      "surface-bright": "#fdf8f8",
+                      "secondary-fixed": "#ffdea5",
+                      "error-container": "#ffdad6",
+                      "on-secondary-container": "#785a1a",
+                      "background": "#fdf8f8",
+                      "surface-tint": "#5f5e5e",
+                      "secondary-fixed-dim": "#e9c176",
+                      "secondary": "#775a19",
+                      "surface-container-low": "#f7f3f2",
+                      "primary-fixed": "#e5e2e1",
+                      "primary-container": "#1c1b1b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "max-width": "1280px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Bodoni Moda"],
+                      "label-caps": ["Plus Jakarta Sans"],
+                      "headline-xl": ["Bodoni Moda"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "headline-lg-mobile": ["Bodoni Moda"],
+                      "headline-md": ["Bodoni Moda"],
+                      "body-md": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .gold-border { border: 1px solid #C5A059; }
+        .bg-parchment { background-color: #fdf8f8; }
+        .active-ring { ring: 2px solid #775a19; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed-dim/30">
+<!-- TopNavBar -->
+<nav class="bg-surface border-b border-secondary flex justify-between items-center w-full px-margin-desktop max-w-max-width mx-auto h-20 sticky top-0 z-50">
+<div class="font-headline-md text-headline-md font-semibold text-primary tracking-tighter">Cosmopolita</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#">The Menu</a>
+<a class="text-secondary font-bold border-b-2 border-secondary font-body-md transition-colors duration-300" href="#">Build Plate</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#">Our Story</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#">Locations</a>
+</div>
+<div class="flex items-center space-x-6 text-primary">
+<button class="hover:opacity-80 scale-95 transition-all"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span></button>
+<button class="hover:opacity-80 scale-95 transition-all"><span class="material-symbols-outlined" data-icon="person">person</span></button>
+</div>
+</nav>
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<header class="mb-12">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-2">Build Your Plate</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">Confecciona tu Plato: Curate your own global journey by selecting from our world-class ingredients.</p>
+</header>
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Selection Area -->
+<div class="flex-1 space-y-16">
+<!-- Category: Bases -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-md text-headline-md text-primary">1. Bases <span class="font-body-md text-on-surface-variant opacity-60 ml-4">(Arroces)</span></h2>
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim bg-primary px-3 py-1">Required</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Item -->
+<button class="group text-left focus:outline-none">
+<div class="aspect-[3/2] overflow-hidden mb-4 gold-border transition-all group-hover:scale-[1.02]">
+<img class="w-full h-full object-cover" data-alt="A high-end studio food photograph of traditional Cuban Arroz con Gris, featuring black beans and rice garnished with fresh cilantro. The lighting is warm and cinematic, highlighting the texture of the rice grains against a dark, minimalist ceramic plate. The overall aesthetic is elegant and gourmet, reflecting a prestigious fine-dining atmosphere with subtle gold accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT8Xnrj9JEFr13bCrQghHTcaMCPH8qyBCG0pI2eM06HwKZMVv0ldsz7hjirXzcBATWgFL5xc-eXzCNPpe0P5nG7Z3sUnSDhfZAAPm0Z5vyCsx-O7dbR29YzaM15wbdCV_OqNHnTRigLPN5oOP9O_7B1KLOpFaOVmNPuqPRh0W--C4SETGFobRs-3G5YvgjsvfE7JgK2q4rTUrZ3eU52OkKo1o-R28is_T4k4nCAX91u_l-Y_v5QShRlYCp4Z2j1Hcxm0FuOGFL9el5"/>
+</div>
+<h3 class="font-headline-md text-[20px] text-center mb-1">Arroz con gris</h3>
+<p class="font-label-caps text-label-caps text-center text-on-surface-variant uppercase tracking-widest">Cuba</p>
+</button>
+<!-- Item -->
+<button class="group text-left focus:outline-none">
+<div class="aspect-[3/2] overflow-hidden mb-4 border border-outline-variant transition-all group-hover:scale-[1.02]">
+<img class="w-full h-full object-cover" data-alt="Gourmet Caribbean coconut rice served in a sophisticated white bowl, topped with toasted coconut flakes and a sprig of mint. The lighting is bright and high-key, creating a fresh, light-mode aesthetic. The composition is clean and editorial, emphasizing the creamy texture and pristine white colors of the dish, set against a parchment-textured background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARnhf7fUgL7xzWimB6riQGXwhw32xPQ0rkIm9Hc6f6xdGPRqb2cJJsOXtT0d63_8rdgM_cnpssovhQn2CzEtZoLJ5UOAb05RuZbNX6r5ZPXus48_xfxiV_-IfhtgUDqmawpLlNTMrJ0VaxYa4dO_xBG8aBCKV_43OXK84cbieuYFzWntaQWWs1Exld5Lajg91siBuRUM7Awkjay47kQbHgQsBgIDysD1v_uX5SYjWgDd0JM-MqHTfbe9w1gai5iSLFhdD0_i12byun"/>
+</div>
+<h3 class="font-headline-md text-[20px] text-center mb-1">Arroz con coco</h3>
+<p class="font-label-caps text-label-caps text-center text-on-surface-variant uppercase tracking-widest">Caribe</p>
+</button>
+<!-- Item -->
+<button class="group text-left focus:outline-none">
+<div class="aspect-[3/2] overflow-hidden mb-4 border border-outline-variant transition-all group-hover:scale-[1.02]">
+<img class="w-full h-full object-cover" data-alt="Vibrant Spanish Arroz a la Valenciana presented in a traditional metal paella pan. The dish is rich with saffron-infused rice, colorful peppers, and peas. The lighting is golden and appetizing, accentuating the vibrant yellow and red hues. The photography is macro-focused, capturing every savory detail in an editorial, world-class buffet style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPZqfEKzZkCAGMh12V8AY9nbzwnI0mnB7039xqeUIT96bPqTA8QejrB0w4XqERuyzw83CvLFqnKuWEkCyQRpmulVAp3hAGuxf3DXighlhoSrlP0WYZqwNGfgcMo2R27b_vUiwRbzc0CuEbsPrC9TGtB1Ii6uQHQbNgvEbln-vNNKKmEYHyUVv0626wbInqxT9zCguHgBzn8AQ-iwzvT8HCw4MWjnxN2dA9hYIFICBa9_pR_hx2Eo5iPoMheA2pR6Z1FKBCOHDGxklc"/>
+</div>
+<h3 class="font-headline-md text-[20px] text-center mb-1">Arroz a la valenciana</h3>
+<p class="font-label-caps text-label-caps text-center text-on-surface-variant uppercase tracking-widest">España</p>
+</button>
+</div>
+</section>
+<!-- Category: Proteínas -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-md text-headline-md text-primary">2. Proteínas <span class="font-body-md text-on-surface-variant opacity-60 ml-4">(Carnes)</span></h2>
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim bg-primary px-3 py-1">Choose One</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<button class="flex items-center gap-6 p-4 border border-outline-variant hover:border-secondary transition-all text-left">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Succulent shredded beef Ropa Vieja slow-cooked in a rich tomato and bell pepper sauce, served in an elegant clay dish. The lighting is moody and dramatic, focusing on the tender fibers of the meat and the glossy sheen of the sauce. The overall aesthetic is sophisticated and worldly, highlighting traditional Cuban culinary excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYk15s2VTsoBDq8LteSKZ87zAOFMc4uSQEl_NsLmU4O63lvWlsEvLeQBkRxLTSoAZVzA7r-wz0-L1tzvxl4V4Lx62oaz6sowAHZrGXKXYqTKe-FJxHs2TV8vC8biqfFC7Iic6rf5D54VPkKPdJkWbQc1FaX2jjXt5Rfy6uuUOR4vic8lXzHimlb_KFLqfB1KsZ3mH1Eo3QZpuog1F9IzwlXZ2MZra4uD4j_I6Ap9UoeeVf1g7uCXMTxDcVlxPNlHlIYrRddVe1rl4L"/>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px]">Ropa Vieja (Cuba)</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-1">Slow-cooked shredded beef with peppers.</p>
+</div>
+</button>
+<button class="flex items-center gap-6 p-4 border border-outline-variant hover:border-secondary transition-all text-left">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A refined presentation of Venezuelan Pabellón meat, perfectly seasoned and tender. The shot is a macro close-up with soft, natural lighting that emphasizes the rich, savory textures. The color palette consists of deep browns and earthy tones, set against a clean, modern white ceramic background for a contemporary editorial look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDmN5SW2IdoBtStPM2RPk1nsL667h95lWwm4nQ1Q3ERI25M33400bhYPei-fcWKkXEwXAD_0mHJIAppedK0_1Xqz-Tac8wu3abeq1pg5yOcN9sprGjnp6bPg6u6fRoKQI_bM8tIwEZKT2u4DPLhsuELNDR7BuVPTwM5Po2cprd2zIJtO7LsBPmUlYKu6p1FN4M8K8hhHdz7V0GDsBX1dsTwRO4-IkjQhsv_niM_l7_WAE7pR2yPoUvPBfE7haevRWsnU1uN7kUT1oi"/>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px]">Pabellón (Venezuela)</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-1">Traditional shredded beef, Venezuelan style.</p>
+</div>
+</button>
+<button class="flex items-center gap-6 p-4 border border-outline-variant hover:border-secondary transition-all text-left">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Golden-brown Pollo al Ajillo, Spanish garlic chicken, garnished with crispy garlic chips and fresh parsley. The lighting is crisp and clear, showcasing the glistening skin of the chicken. The composition is balanced and elegant, using a minimalist approach that allows the appetizing quality of the food to take center stage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChFuRNjkL45PZvRyeQ3hdvmkd3qhwrgubyZb8_bc9qgRCAnvqlPEjHurAHX8dc9nz6cJgjz586RdR3bxB5GKPXlSn2pB87ECn1R3RCUZXQNSUWonJAKA1WWTb_s881YKZfbjQ6ttOPckbQ-_LjRmr7cg_c-QWTLM5lXPYI_65iWllT6Tr4Cyi2KWAOmbVWZfx4ae1EIEsKLLbEMkhNAxV72uxh4LB1vg5GvGSkl320fMRIzGQAZDPMNxtWRJN_9neWRISoctng7Oht"/>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px]">Pollo al Ajillo (España)</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-1">Sautéed chicken in a vibrant garlic wine sauce.</p>
+</div>
+</button>
+<button class="flex items-center gap-6 p-4 border border-outline-variant hover:border-secondary transition-all text-left">
+<div class="w-24 h-24 flex-shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Slow-roasted Mediterranean Lamb served with rosemary and olive oil. The image captures the tender, pink center of the lamb and the herb-crusted exterior. The mood is one of prestige and wanderlust, with a lighting setup that evokes a sunset dinner on a Mediterranean terrace. The colors are warm, rich, and deeply satisfying." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_nE0_OhiFE6pRHLOjt_2Kf5AWi35y0S_BM-dD4IVL_tUscBkBzMcWRqA6P1AyphtK3ISetYbnUbAG21R_P2VTWIVjcIZyZ35aUH1u5WorTGULXhk50YbCKpOqSrqJdkeSrokppw-OAsEAP4CWKxWMKLOij-E5NcQ5oeBT3Y-oRL_UKqvY6z3fYdvY4r5NWwz7GTayTG53ibaoltY21xpkkPy1Vdd6DX1O-JpJ7OCIJp5wdIPjDnlFnv2dULX58irfQz9XernbGcfh"/>
+</div>
+<div>
+<h3 class="font-headline-md text-[18px]">Cordero Mediterráneo</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-1">Tender roasted lamb with aromatic herbs.</p>
+</div>
+</button>
+</div>
+</section>
+<!-- Category: Salsas -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-md text-headline-md text-primary">3. Salsas</h2>
+<span class="font-label-caps text-label-caps text-on-surface-variant opacity-60">Optional</span>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="px-8 py-3 gold-border font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest">Mojo criollo</button>
+<button class="px-8 py-3 border border-outline-variant font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest">Chimichurri</button>
+<button class="px-8 py-3 border border-outline-variant font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest">Salsa Romesco</button>
+<button class="px-8 py-3 border border-outline-variant font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest">Alioli</button>
+</div>
+</section>
+<!-- Category: Acompañamientos -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline-md text-headline-md text-primary">4. Acompañamientos</h2>
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim bg-primary px-3 py-1">Choose Two</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<button class="group relative aspect-square overflow-hidden gold-border">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Sweet fried plantains, Plátano frito, caramelized to perfection with a deep golden-brown exterior. The photography is close-up and tactile, showing the glistening natural sugars. Set against a clean, warm-toned parchment surface, the image evokes a sense of authentic tropical flavor in a sophisticated, modern culinary context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfBYvMO1ZRunjs9YnFdjXUrcHqHY_OoHNA7sUcolStyCDRpS19L8XtAlIE7CmTwY3glWy73I_yveunbzLc0QB1V4x1-wLgaT1LCcC8wruO9Og4owhBGum8qX0k8sxQZeKY49J9555s2wFoBIsCMw6szeov6jaaTl4eIk-_E9J_mgSjwM0K21pzE6-X1luJo47F8xHISMgqXnrx7cJcUtJenqOuRADoL0lkKwEo44WApOBB1GaMNwSO4uhwoaaiBL5EDC-9eh0LB5yJ"/>
+<div class="absolute inset-0 bg-black/40 flex items-end p-4">
+<p class="text-white font-label-caps text-label-caps">Plátano frito</p>
+</div>
+</button>
+<button class="group relative aspect-square overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Yuca con mojo, a traditional dish of boiled cassava root topped with a zesty garlic and citrus sauce. The lighting is bright and appetizing, highlighting the starchy texture of the yuca and the vibrant green flecks of herbs in the sauce. The style is minimalist and editorial, focusing on the purity of the ingredients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQBw9f4MA9rbCh_xmGDyDeGk3juV4iwxwcDsOXSpTbySpn6Wc9Cn0PC5zabFUN8CLr3d0GloiF8UvGL7WeVGW2rk0qWag_LIoseNOk2JGh7X9UMgP2H4nEMSeXrPyTQHpF5KytgtRTiKjDhImqRC_hnXDJaAFcQskaFx0ODWRuu0FhUEL-BvtwV-8Ju_sP_9AMHPuK-FAHGFXOcSwtFfAuxkJP04hCo0Ilk_2OQs6nJTqYOxAJwYjvZIkQeN8j-gnYuzho7B81Z-ei"/>
+<div class="absolute inset-0 bg-black/40 flex items-end p-4">
+<p class="text-white font-label-caps text-label-caps">Yuca con mojo</p>
+</div>
+</button>
+<button class="group relative aspect-square overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A fresh and vibrant Mediterranean salad featuring tomatoes, cucumbers, olives, and feta cheese. The photography uses high-resolution macro details to show the freshness of the vegetables and the shimmer of extra virgin olive oil. The palette is a mix of bright greens, reds, and whites, reflecting a healthy and sophisticated lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPr9najYVJvnDd7VnUKvrXEh7ytRTWS0ZrdLFu7AGuLSVt98gfA-NDjQsWIwvQF7_sc5Tud1Zzh-JQdfydaRdROWRU1iDZNglkhEW7MriiLXkxrivURsPVtXGanVRadWqggjEyUhSeyHBQ24C21WxNwwmlKhia-lbwtSDCPMx41kp7Q2a2JzJfy8O4hsZlIsBvS-T_2CYP6ie5sKJx6R2YwqznogKLTnRi4zbFVPI2eulEMN9lsfBOqtBSzu-g2osi3fn2vrHv--aJ"/>
+<div class="absolute inset-0 bg-black/40 flex items-end p-4">
+<p class="text-white font-label-caps text-label-caps">Ensalada</p>
+</div>
+</button>
+<button class="group relative aspect-square overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Crispy fried chickpeas, Garbanzos fritos, seasoned with smoked paprika and sea salt. The image is a sharp, textured close-up with dramatic lighting that creates deep shadows and bright highlights. The overall aesthetic is rustic yet refined, capturing a savory snack in a prestigious, worldly buffet presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByLOiAJoKaGIXWDT1R9I-b2K_v85JhZnDfaz6PLnmoip1GGhbEo3oNVjEm00EacxLE1_biJDzmqYHn8ePbGeUm6vvn_Ggz3DxdySiHxliFiYIetZfFCm7KEqzttJ6bXYsLafrIBVC55T7HezuEjMGFdRR6A6fjS3mm--RYuGQ8d9-9g8CinYZrQurbzjPlIT42aInZf4PdtiO2oPFstP995qFgo8NKQHeyJvNukDx4Fvas9d8mqz7i4hQqVsNUTfvgS2bs3MK4Tk10"/>
+<div class="absolute inset-0 bg-black/40 flex items-end p-4">
+<p class="text-white font-label-caps text-label-caps">Garbanzos fritos</p>
+</div>
+</button>
+</div>
+</section>
+</div>
+<!-- Summary Panel (Sticky) -->
+<aside class="lg:w-[400px]">
+<div class="lg:sticky lg:top-32 gold-border bg-surface p-8 space-y-8">
+<h2 class="font-headline-md text-headline-md text-primary border-b border-outline-variant pb-4">Your Plate</h2>
+<div class="space-y-6">
+<div class="flex justify-between items-start group">
+<div>
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Base</p>
+<p class="font-body-lg">Arroz con gris</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Proteína</p>
+<p class="font-body-lg">Ropa Vieja (Cuba)</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Salsa</p>
+<p class="font-body-lg">Mojo criollo</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">close</span></button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Acompañamientos</p>
+<p class="font-body-lg">Plátano frito, Yuca con mojo</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant space-y-4">
+<div class="flex justify-between items-baseline">
+<span class="font-body-md text-on-surface-variant">Estimated Total</span>
+<span class="font-headline-md text-headline-md">$24.50</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 font-label-caps text-label-caps tracking-widest hover:bg-secondary transition-all active:scale-95">
+                            ADD TO CART
+                        </button>
+<p class="text-center font-body-md text-[12px] text-on-surface-variant opacity-60">Prices may vary based on specific selections.</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary border-t border-secondary/30 mt-24">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-max-width mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-headline-lg text-headline-lg text-on-primary mb-2">Cosmopolita</div>
+<p class="font-body-md text-on-primary-container">© 2024 Cosmopolita. A Global Buffet Experience.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-label-caps text-label-caps uppercase tracking-widest">
+<a class="text-on-primary-container hover:text-secondary transition-colors" href="#">Privacy</a>
+<a class="text-on-primary-container hover:text-secondary transition-colors" href="#">Terms</a>
+<a class="text-on-primary-container hover:text-secondary transition-colors" href="#">Contact</a>
+<a class="text-on-primary-container hover:text-secondary transition-colors" href="#">Sustainability</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-base px-margin-mobile bg-primary border-t border-secondary shadow-lg z-50">
+<div class="flex flex-col items-center justify-center text-on-primary/70">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-[10px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-secondary-fixed bg-secondary-fixed-dim/10 rounded-full p-2 scale-90">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-label-caps text-[10px]">Build Plate</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-primary/70">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-caps text-[10px]">Cart</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-primary/70">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-caps text-[10px]">Profile</span>
+</div>
+</div>
+</body></html>
