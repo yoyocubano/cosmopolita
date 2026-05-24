@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -10,9 +9,13 @@
 <meta property="og:image" content="./assets/image_2.jpg" />
 <meta property="og:url" content="https://yoyocubano.github.io/cosmopolita/" />
 <meta name="twitter:card" content="summary_large_image">
+
+<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -20,328 +23,649 @@
           theme: {
             extend: {
               "colors": {
-                      "on-tertiary-fixed": "#1c1b1a",
                       "primary": "#000000",
-                      "inverse-primary": "#c8c6c5",
-                      "surface-container-highest": "#e5e2e1",
-                      "on-primary-container": "#858383",
-                      "tertiary-fixed-dim": "#cac6c3",
                       "on-primary": "#ffffff",
-                      "error": "#ba1a1a",
-                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#775a19",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#ffdea5",
+                      "secondary-fixed-dim": "#e9c176",
+                      "background": "#fdf8f8",
+                      "on-background": "#1c1b1b",
+                      "surface": "#fdf8f8",
                       "on-surface": "#1c1b1b",
                       "on-surface-variant": "#444748",
-                      "on-secondary-fixed-variant": "#5d4201",
-                      "on-secondary-fixed": "#261900",
-                      "secondary-container": "#fed488",
-                      "tertiary-container": "#1c1b1a",
-                      "surface-dim": "#ddd9d8",
-                      "on-primary-fixed-variant": "#474646",
-                      "surface-variant": "#e5e2e1",
-                      "primary-fixed-dim": "#c8c6c5",
-                      "on-tertiary": "#ffffff",
-                      "on-tertiary-fixed-variant": "#484645",
-                      "on-background": "#1c1b1b",
                       "outline-variant": "#c4c7c7",
-                      "outline": "#747878",
-                      "tertiary-fixed": "#e6e1df",
-                      "on-error-container": "#93000a",
-                      "inverse-on-surface": "#f4f0ef",
-                      "surface-container-high": "#ebe7e6",
-                      "surface": "#fdf8f8",
-                      "on-tertiary-container": "#868381",
-                      "on-error": "#ffffff",
-                      "on-primary-fixed": "#1c1b1b",
-                      "surface-container": "#f1edec",
-                      "on-secondary": "#ffffff",
-                      "inverse-surface": "#313030",
-                      "tertiary": "#000000",
-                      "surface-bright": "#fdf8f8",
-                      "secondary-fixed": "#ffdea5",
-                      "error-container": "#ffdad6",
-                      "on-secondary-container": "#785a1a",
-                      "background": "#fdf8f8",
-                      "surface-tint": "#5f5e5e",
-                      "secondary-fixed-dim": "#e9c176",
-                      "secondary": "#775a19",
-                      "surface-container-low": "#f7f3f2",
-                      "primary-fixed": "#e5e2e1",
-                      "primary-container": "#1c1b1b"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "spacing": {
-                      "margin-desktop": "64px",
-                      "max-width": "1280px",
-                      "margin-mobile": "16px",
-                      "base": "8px",
-                      "gutter": "24px"
+                      "outline": "#747878"
               },
               "fontFamily": {
-                      "headline-lg": ["Bodoni Moda"],
-                      "label-caps": ["Plus Jakarta Sans"],
                       "headline-xl": ["Bodoni Moda"],
-                      "body-lg": ["Plus Jakarta Sans"],
-                      "headline-lg-mobile": ["Bodoni Moda"],
+                      "headline-lg": ["Bodoni Moda"],
                       "headline-md": ["Bodoni Moda"],
-                      "body-md": ["Plus Jakarta Sans"]
-              },
-              "fontSize": {
-                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
-                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                      "headline-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
-                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "label-caps": ["Plus Jakarta Sans"]
               }
             },
           },
         }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+        body { -webkit-tap-highlight-color: transparent; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
         .gold-border { border: 1px solid #C5A059; }
-        .bg-parchment { background-color: #fdf8f8; }
-        .active-ring { ring: 2px solid #775a19; }
+        .active-choice {
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.5) !important;
+            border-color: #C5A059 !important;
+            transform: scale(1.02);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .active-choice-bg {
+            background-color: #C5A059 !important;
+            color: #0b0f10 !important;
+        }
+        /* Custom Swiper pagination */
+        .swiper-pagination-bullet-active { background: #C5A059 !important; }
+        
+        /* Drawer animation */
+        #cart-drawer { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        #cart-drawer.open { transform: translateX(0); }
+        #cart-overlay { opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+        #cart-overlay.open { opacity: 1; pointer-events: auto; }
+        
+        /* Modals */
+        .modal { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+        .modal.open { opacity: 1; pointer-events: auto; }
+        .modal-content { transform: scale(0.95); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .modal.open .modal-content { transform: scale(1); }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed-dim/30">
+<body class="bg-background text-on-surface font-body-md">
 <!-- TopNavBar -->
-<nav class="bg-surface border-b border-secondary flex justify-between items-center w-full px-margin-desktop max-w-max-width mx-auto h-20 sticky top-0 z-50">
-<div class="font-headline-md text-headline-md font-semibold text-primary tracking-tighter">Cosmopolita</div>
-<div class="hidden md:flex items-center space-x-8">
-<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#">The Menu</a>
-<a class="text-secondary font-bold border-b-2 border-secondary font-body-md transition-colors duration-300" href="#">Build Plate</a>
-<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#">Our Story</a>
-<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#">Locations</a>
-</div>
-<div class="flex items-center space-x-6 text-primary">
-<button class="hover:opacity-80 scale-95 transition-all"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span></button>
-<button class="hover:opacity-80 scale-95 transition-all"><span class="material-symbols-outlined" data-icon="person">person</span></button>
-</div>
+<nav class="bg-surface border-b border-secondary/20 flex justify-between items-center w-full px-4 md:px-16 mx-auto h-20 sticky top-0 z-40 shadow-sm">
+    <div class="font-headline-md text-3xl font-semibold text-primary tracking-tighter cursor-pointer" onclick="window.scrollTo(0,0)">Cosmopolita</div>
+    <div class="hidden md:flex items-center space-x-8">
+        <a class="text-secondary font-bold border-b-2 border-secondary font-body-md" href="#">Build Plate</a>
+        <a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#" onclick="openAdminModal(event)">Admin Panel</a>
+    </div>
+    <div class="flex items-center space-x-6 text-primary">
+        <button id="cart-nav-btn" class="hover:opacity-80 scale-95 transition-all relative">
+            <span class="material-symbols-outlined text-3xl">shopping_bag</span>
+            <span id="cart-badge-nav" class="absolute -top-1 -right-1 bg-secondary text-on-secondary rounded-full w-5 h-5 flex items-center justify-center font-bold text-[10px] hidden">0</span>
+        </button>
+    </div>
 </nav>
-<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12">
-<header class="mb-12">
-<h1 class="font-headline-xl text-headline-xl text-primary mb-2">Build Your Plate</h1>
-<p class="font-body-lg text-on-surface-variant max-w-2xl">Confecciona tu Plato: Curate your own global journey by selecting from our world-class ingredients.</p>
-</header>
-<div class="flex flex-col lg:flex-row gap-gutter">
-<!-- Selection Area -->
-<div class="flex-1 space-y-16">
-<!-- Category: Bases -->
-<section>
-<div class="flex items-center justify-between mb-8">
-<h2 class="font-headline-md text-headline-md text-primary">1. Bases <span class="font-body-md text-on-surface-variant opacity-60 ml-4">(Arroces)</span></h2>
-<span class="font-label-caps text-label-caps text-secondary-fixed-dim bg-primary px-3 py-1">Required</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Item -->
-<button class="group text-left focus:outline-none">
-<div class="aspect-[3/2] overflow-hidden mb-4 gold-border transition-all group-hover:scale-[1.02]">
-<img class="w-full h-full object-cover" data-alt="A high-end studio food photograph of traditional Cuban Arroz con Gris, featuring black beans and rice garnished with fresh cilantro. The lighting is warm and cinematic, highlighting the texture of the rice grains against a dark, minimalist ceramic plate. The overall aesthetic is elegant and gourmet, reflecting a prestigious fine-dining atmosphere with subtle gold accents in the background." src="./assets/arroz_con_gris.webp"/>
-</div>
-<h3 class="font-headline-md text-[20px] text-center mb-1">Arroz con gris</h3>
-<p class="font-label-caps text-label-caps text-center text-on-surface-variant uppercase tracking-widest">Cuba</p>
-</button>
-<!-- Item -->
-<button class="group text-left focus:outline-none">
-<div class="aspect-[3/2] overflow-hidden mb-4 border border-outline-variant transition-all group-hover:scale-[1.02]">
-<img class="w-full h-full object-cover" data-alt="Gourmet Caribbean coconut rice served in a sophisticated white bowl, topped with toasted coconut flakes and a sprig of mint. The lighting is bright and high-key, creating a fresh, light-mode aesthetic. The composition is clean and editorial, emphasizing the creamy texture and pristine white colors of the dish, set against a parchment-textured background." src="./assets/arroz_con_coco.webp"/>
-</div>
-<h3 class="font-headline-md text-[20px] text-center mb-1">Arroz con coco</h3>
-<p class="font-label-caps text-label-caps text-center text-on-surface-variant uppercase tracking-widest">Caribe</p>
-</button>
-<!-- Item -->
-<button class="group text-left focus:outline-none">
-<div class="aspect-[3/2] overflow-hidden mb-4 border border-outline-variant transition-all group-hover:scale-[1.02]">
-<img class="w-full h-full object-cover" data-alt="Vibrant Spanish Arroz a la Valenciana presented in a traditional metal paella pan. The dish is rich with saffron-infused rice, colorful peppers, and peas. The lighting is golden and appetizing, accentuating the vibrant yellow and red hues. The photography is macro-focused, capturing every savory detail in an editorial, world-class buffet style." src="./assets/arroz_a_la_valenciana.webp"/>
-</div>
-<h3 class="font-headline-md text-[20px] text-center mb-1">Arroz a la valenciana</h3>
-<p class="font-label-caps text-label-caps text-center text-on-surface-variant uppercase tracking-widest">España</p>
-</button>
-</div>
-</section>
-<!-- Category: Proteínas -->
-<section>
-<div class="flex items-center justify-between mb-8">
-<h2 class="font-headline-md text-headline-md text-primary">2. Proteínas <span class="font-body-md text-on-surface-variant opacity-60 ml-4">(Carnes)</span></h2>
-<span class="font-label-caps text-label-caps text-secondary-fixed-dim bg-primary px-3 py-1">Choose One</span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<button class="flex items-center gap-6 p-4 border border-outline-variant hover:border-secondary transition-all text-left">
-<div class="w-24 h-24 flex-shrink-0 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Succulent shredded beef Ropa Vieja slow-cooked in a rich tomato and bell pepper sauce, served in an elegant clay dish. The lighting is moody and dramatic, focusing on the tender fibers of the meat and the glossy sheen of the sauce. The overall aesthetic is sophisticated and worldly, highlighting traditional Cuban culinary excellence." src="./assets/ropa_vieja.webp"/>
-</div>
-<div>
-<h3 class="font-headline-md text-[18px]">Ropa Vieja (Cuba)</h3>
-<p class="font-body-md text-on-surface-variant line-clamp-1">Slow-cooked shredded beef with peppers.</p>
-</div>
-</button>
-<button class="flex items-center gap-6 p-4 border border-outline-variant hover:border-secondary transition-all text-left">
-<div class="w-24 h-24 flex-shrink-0 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="A refined presentation of Venezuelan Pabellón meat, perfectly seasoned and tender. The shot is a macro close-up with soft, natural lighting that emphasizes the rich, savory textures. The color palette consists of deep browns and earthy tones, set against a clean, modern white ceramic background for a contemporary editorial look." src="./assets/pabellon.webp"/>
-</div>
-<div>
-<h3 class="font-headline-md text-[18px]">Pabellón (Venezuela)</h3>
-<p class="font-body-md text-on-surface-variant line-clamp-1">Traditional shredded beef, Venezuelan style.</p>
-</div>
-</button>
-<button class="flex items-center gap-6 p-4 border border-outline-variant hover:border-secondary transition-all text-left">
-<div class="w-24 h-24 flex-shrink-0 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Golden-brown Pollo al Ajillo, Spanish garlic chicken, garnished with crispy garlic chips and fresh parsley. The lighting is crisp and clear, showcasing the glistening skin of the chicken. The composition is balanced and elegant, using a minimalist approach that allows the appetizing quality of the food to take center stage." src="./assets/image_5.jpg"/>
-</div>
-<div>
-<h3 class="font-headline-md text-[18px]">Pollo al Ajillo (España)</h3>
-<p class="font-body-md text-on-surface-variant line-clamp-1">Sautéed chicken in a vibrant garlic wine sauce.</p>
-</div>
-</button>
-<button class="flex items-center gap-6 p-4 border border-outline-variant hover:border-secondary transition-all text-left">
-<div class="w-24 h-24 flex-shrink-0 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Slow-roasted Mediterranean Lamb served with rosemary and olive oil. The image captures the tender, pink center of the lamb and the herb-crusted exterior. The mood is one of prestige and wanderlust, with a lighting setup that evokes a sunset dinner on a Mediterranean terrace. The colors are warm, rich, and deeply satisfying." src="./assets/image_10.jpg"/>
-</div>
-<div>
-<h3 class="font-headline-md text-[18px]">Cordero Mediterráneo</h3>
-<p class="font-body-md text-on-surface-variant line-clamp-1">Tender roasted lamb with aromatic herbs.</p>
-</div>
-</button>
-</div>
-</section>
-<!-- Category: Salsas -->
-<section>
-<div class="flex items-center justify-between mb-8">
-<h2 class="font-headline-md text-headline-md text-primary">3. Salsas</h2>
-<span class="font-label-caps text-label-caps text-on-surface-variant opacity-60">Optional</span>
-</div>
-<div class="flex flex-wrap gap-4">
-<button class="px-8 py-3 gold-border font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest">Mojo criollo</button>
-<button class="px-8 py-3 border border-outline-variant font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest">Chimichurri</button>
-<button class="px-8 py-3 border border-outline-variant font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest">Salsa Romesco</button>
-<button class="px-8 py-3 border border-outline-variant font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest">Alioli</button>
-</div>
-</section>
-<!-- Category: Acompañamientos -->
-<section>
-<div class="flex items-center justify-between mb-8">
-<h2 class="font-headline-md text-headline-md text-primary">4. Acompañamientos</h2>
-<span class="font-label-caps text-label-caps text-secondary-fixed-dim bg-primary px-3 py-1">Choose Two</span>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-<button class="group relative aspect-square overflow-hidden gold-border">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Sweet fried plantains, Plátano frito, caramelized to perfection with a deep golden-brown exterior. The photography is close-up and tactile, showing the glistening natural sugars. Set against a clean, warm-toned parchment surface, the image evokes a sense of authentic tropical flavor in a sophisticated, modern culinary context." src="./assets/image_1.jpg"/>
-<div class="absolute inset-0 bg-black/40 flex items-end p-4">
-<p class="text-white font-label-caps text-label-caps">Plátano frito</p>
-</div>
-</button>
-<button class="group relative aspect-square overflow-hidden border border-outline-variant">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Yuca con mojo, a traditional dish of boiled cassava root topped with a zesty garlic and citrus sauce. The lighting is bright and appetizing, highlighting the starchy texture of the yuca and the vibrant green flecks of herbs in the sauce. The style is minimalist and editorial, focusing on the purity of the ingredients." src="./assets/image_6.jpg"/>
-<div class="absolute inset-0 bg-black/40 flex items-end p-4">
-<p class="text-white font-label-caps text-label-caps">Yuca con mojo</p>
-</div>
-</button>
-<button class="group relative aspect-square overflow-hidden border border-outline-variant">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A fresh and vibrant Mediterranean salad featuring tomatoes, cucumbers, olives, and feta cheese. The photography uses high-resolution macro details to show the freshness of the vegetables and the shimmer of extra virgin olive oil. The palette is a mix of bright greens, reds, and whites, reflecting a healthy and sophisticated lifestyle." src="./assets/image_8.jpg"/>
-<div class="absolute inset-0 bg-black/40 flex items-end p-4">
-<p class="text-white font-label-caps text-label-caps">Ensalada</p>
-</div>
-</button>
-<button class="group relative aspect-square overflow-hidden border border-outline-variant">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Crispy fried chickpeas, Garbanzos fritos, seasoned with smoked paprika and sea salt. The image is a sharp, textured close-up with dramatic lighting that creates deep shadows and bright highlights. The overall aesthetic is rustic yet refined, capturing a savory snack in a prestigious, worldly buffet presentation." src="./assets/image_9.jpg"/>
-<div class="absolute inset-0 bg-black/40 flex items-end p-4">
-<p class="text-white font-label-caps text-label-caps">Garbanzos fritos</p>
-</div>
-</button>
-</div>
-</section>
-</div>
-<!-- Summary Panel (Sticky) -->
-<aside class="lg:w-[400px]">
-<div class="lg:sticky lg:top-32 gold-border bg-surface p-8 space-y-8">
-<h2 class="font-headline-md text-headline-md text-primary border-b border-outline-variant pb-4">Your Plate</h2>
-<div class="space-y-6">
-<div class="flex justify-between items-start group">
-<div>
-<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Base</p>
-<p class="font-body-lg">Arroz con gris</p>
-</div>
-<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">edit</span></button>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Proteína</p>
-<p class="font-body-lg">Ropa Vieja (Cuba)</p>
-</div>
-<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">edit</span></button>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Salsa</p>
-<p class="font-body-lg">Mojo criollo</p>
-</div>
-<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">close</span></button>
-</div>
-<div class="flex justify-between items-start">
-<div>
-<p class="font-label-caps text-label-caps text-secondary uppercase mb-1">Acompañamientos</p>
-<p class="font-body-lg">Plátano frito, Yuca con mojo</p>
-</div>
-<button class="text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[20px]">edit</span></button>
-</div>
-</div>
-<div class="pt-8 border-t border-outline-variant space-y-4">
-<div class="flex justify-between items-baseline">
-<span class="font-body-md text-on-surface-variant">Estimated Total</span>
-<span class="font-headline-md text-headline-md">$24.50</span>
-</div>
-<button class="w-full bg-primary text-on-primary py-5 font-label-caps text-label-caps tracking-widest hover:bg-secondary transition-all active:scale-95">
-                            ADD TO CART
-                        </button>
-<p class="text-center font-body-md text-[12px] text-on-surface-variant opacity-60">Prices may vary based on specific selections.</p>
-</div>
-</div>
-</aside>
-</div>
+
+<main class="max-w-[1280px] mx-auto px-4 md:px-16 py-8 md:py-12">
+    <header class="mb-10 text-center md:text-left">
+        <h1 class="font-headline-xl text-4xl md:text-6xl text-primary mb-4">Build Your Plate</h1>
+        <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0">Curate your own global journey by selecting from our world-class ingredients.</p>
+    </header>
+
+    <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Selection Area -->
+        <div class="flex-1 space-y-12">
+            
+            <!-- Category: Bases (Carousel) -->
+            <section>
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="font-headline-md text-2xl md:text-3xl text-primary">1. Bases <span class="text-on-surface-variant opacity-60 text-lg ml-2">(Arroces)</span></h2>
+                    <span class="text-xs font-bold text-secondary-fixed-dim bg-primary px-3 py-1 uppercase tracking-widest rounded-sm">Required</span>
+                </div>
+                <div class="swiper bases-swiper pb-10">
+                    <div class="swiper-wrapper" id="bases-grid">
+                        <div class="swiper-slide">
+                            <button class="w-full group text-left focus:outline-none select-btn" data-category="base" data-name="Arroz con gris" data-price="5.00" data-origin="Cuba">
+                                <div class="aspect-[3/2] overflow-hidden mb-4 border border-outline-variant transition-all duration-300 rounded-lg group-hover:scale-[1.02] choice-img-wrapper">
+                                    <img class="w-full h-full object-cover" src="./assets/arroz_con_gris.webp" alt="Arroz con gris"/>
+                                </div>
+                                <h3 class="font-headline-md text-xl text-center mb-1">Arroz con gris</h3>
+                                <p class="text-xs text-center text-on-surface-variant uppercase tracking-widest mb-1">Cuba</p>
+                                <p class="text-center text-secondary font-bold">$5.00</p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button class="w-full group text-left focus:outline-none select-btn" data-category="base" data-name="Arroz con coco" data-price="6.00" data-origin="Caribe">
+                                <div class="aspect-[3/2] overflow-hidden mb-4 border border-outline-variant transition-all duration-300 rounded-lg group-hover:scale-[1.02] choice-img-wrapper">
+                                    <img class="w-full h-full object-cover" src="./assets/arroz_con_coco.webp" alt="Arroz con coco"/>
+                                </div>
+                                <h3 class="font-headline-md text-xl text-center mb-1">Arroz con coco</h3>
+                                <p class="text-xs text-center text-on-surface-variant uppercase tracking-widest mb-1">Caribe</p>
+                                <p class="text-center text-secondary font-bold">$6.00</p>
+                            </button>
+                        </div>
+                        <div class="swiper-slide">
+                            <button class="w-full group text-left focus:outline-none select-btn" data-category="base" data-name="Arroz a la valenciana" data-price="7.00" data-origin="España">
+                                <div class="aspect-[3/2] overflow-hidden mb-4 border border-outline-variant transition-all duration-300 rounded-lg group-hover:scale-[1.02] choice-img-wrapper">
+                                    <img class="w-full h-full object-cover" src="./assets/arroz_a_la_valenciana.webp" alt="Arroz a la valenciana"/>
+                                </div>
+                                <h3 class="font-headline-md text-xl text-center mb-1">Arroz a la valenciana</h3>
+                                <p class="text-xs text-center text-on-surface-variant uppercase tracking-widest mb-1">España</p>
+                                <p class="text-center text-secondary font-bold">$7.00</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- Category: Proteínas (Grid) -->
+            <section>
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="font-headline-md text-2xl md:text-3xl text-primary">2. Proteínas <span class="text-on-surface-variant opacity-60 text-lg ml-2">(Carnes)</span></h2>
+                    <span class="text-xs font-bold text-secondary-fixed-dim bg-primary px-3 py-1 uppercase tracking-widest rounded-sm">Required</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="proteins-grid">
+                    <button class="flex items-center justify-between gap-4 p-3 border border-outline-variant hover:border-secondary transition-all text-left rounded-lg group focus:outline-none select-btn" data-category="protein" data-name="Ropa Vieja" data-price="12.00">
+                        <div class="flex items-center gap-4">
+                            <img class="w-16 h-16 object-cover rounded border border-outline-variant/30" src="./assets/ropa_vieja.webp"/>
+                            <div>
+                                <h3 class="font-headline-md text-lg">Ropa Vieja</h3>
+                                <p class="text-sm text-on-surface-variant">Cuba</p>
+                            </div>
+                        </div>
+                        <p class="text-secondary font-bold">$12.00</p>
+                    </button>
+                    <button class="flex items-center justify-between gap-4 p-3 border border-outline-variant hover:border-secondary transition-all text-left rounded-lg group focus:outline-none select-btn" data-category="protein" data-name="Pabellón" data-price="11.00">
+                        <div class="flex items-center gap-4">
+                            <img class="w-16 h-16 object-cover rounded border border-outline-variant/30" src="./assets/pabellon.webp"/>
+                            <div>
+                                <h3 class="font-headline-md text-lg">Pabellón</h3>
+                                <p class="text-sm text-on-surface-variant">Venezuela</p>
+                            </div>
+                        </div>
+                        <p class="text-secondary font-bold">$11.00</p>
+                    </button>
+                    <button class="flex items-center justify-between gap-4 p-3 border border-outline-variant hover:border-secondary transition-all text-left rounded-lg group focus:outline-none select-btn" data-category="protein" data-name="Pollo al Ajillo" data-price="9.00">
+                        <div class="flex items-center gap-4">
+                            <img class="w-16 h-16 object-cover rounded border border-outline-variant/30" src="./assets/image_5.jpg"/>
+                            <div>
+                                <h3 class="font-headline-md text-lg">Pollo al Ajillo</h3>
+                                <p class="text-sm text-on-surface-variant">España</p>
+                            </div>
+                        </div>
+                        <p class="text-secondary font-bold">$9.00</p>
+                    </button>
+                    <button class="flex items-center justify-between gap-4 p-3 border border-outline-variant hover:border-secondary transition-all text-left rounded-lg group focus:outline-none select-btn" data-category="protein" data-name="Cordero" data-price="14.00">
+                        <div class="flex items-center gap-4">
+                            <img class="w-16 h-16 object-cover rounded border border-outline-variant/30" src="./assets/image_10.jpg"/>
+                            <div>
+                                <h3 class="font-headline-md text-lg">Cordero</h3>
+                                <p class="text-sm text-on-surface-variant">Mediterráneo</p>
+                            </div>
+                        </div>
+                        <p class="text-secondary font-bold">$14.00</p>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Category: Salsas -->
+            <section>
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="font-headline-md text-2xl md:text-3xl text-primary">3. Salsas</h2>
+                    <span class="text-xs uppercase tracking-widest text-on-surface-variant opacity-60">Optional</span>
+                </div>
+                <div class="flex flex-wrap gap-3" id="salsas-grid">
+                    <button class="px-6 py-2 border border-outline-variant text-xs font-bold hover:border-secondary transition-all uppercase tracking-widest rounded select-btn" data-category="salsa" data-name="Mojo criollo" data-price="1.50">Mojo (+$1.50)</button>
+                    <button class="px-6 py-2 border border-outline-variant text-xs font-bold hover:border-secondary transition-all uppercase tracking-widest rounded select-btn" data-category="salsa" data-name="Chimichurri" data-price="1.50">Chimichurri (+$1.50)</button>
+                    <button class="px-6 py-2 border border-outline-variant text-xs font-bold hover:border-secondary transition-all uppercase tracking-widest rounded select-btn" data-category="salsa" data-name="Romesco" data-price="2.00">Romesco (+$2.00)</button>
+                </div>
+            </section>
+
+            <!-- Category: Acompañamientos -->
+            <section>
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="font-headline-md text-2xl md:text-3xl text-primary">4. Sides</h2>
+                    <span class="text-xs font-bold text-secondary-fixed-dim bg-primary px-3 py-1 uppercase tracking-widest rounded-sm">Max 2</span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="sides-grid">
+                    <button class="group relative aspect-square overflow-hidden border border-outline-variant rounded-lg focus:outline-none select-btn" data-category="side" data-name="Plátano frito" data-price="3.00">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./assets/image_1.jpg"/>
+                        <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-3 transition-all">
+                            <p class="text-white text-xs font-bold uppercase mb-1">Plátano frito</p>
+                            <p class="text-secondary font-bold text-sm">$3.00</p>
+                        </div>
+                    </button>
+                    <button class="group relative aspect-square overflow-hidden border border-outline-variant rounded-lg focus:outline-none select-btn" data-category="side" data-name="Yuca con mojo" data-price="3.50">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./assets/image_6.jpg"/>
+                        <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-3 transition-all">
+                            <p class="text-white text-xs font-bold uppercase mb-1">Yuca con mojo</p>
+                            <p class="text-secondary font-bold text-sm">$3.50</p>
+                        </div>
+                    </button>
+                    <button class="group relative aspect-square overflow-hidden border border-outline-variant rounded-lg focus:outline-none select-btn" data-category="side" data-name="Ensalada" data-price="4.00">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./assets/image_8.jpg"/>
+                        <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-3 transition-all">
+                            <p class="text-white text-xs font-bold uppercase mb-1">Ensalada</p>
+                            <p class="text-secondary font-bold text-sm">$4.00</p>
+                        </div>
+                    </button>
+                    <button class="group relative aspect-square overflow-hidden border border-outline-variant rounded-lg focus:outline-none select-btn" data-category="side" data-name="Garbanzos" data-price="3.50">
+                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./assets/image_9.jpg"/>
+                        <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-3 transition-all">
+                            <p class="text-white text-xs font-bold uppercase mb-1">Garbanzos</p>
+                            <p class="text-secondary font-bold text-sm">$3.50</p>
+                        </div>
+                    </button>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Summary Panel (Desktop Sticky) -->
+        <aside class="lg:w-[380px]">
+            <div class="lg:sticky lg:top-28 gold-border bg-surface p-6 rounded-xl shadow-xl">
+                <h2 class="font-headline-md text-2xl text-primary border-b border-outline-variant pb-3 mb-5">Your Plate</h2>
+                <div class="space-y-4 mb-6">
+                    <div>
+                        <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Base</p>
+                        <p class="text-sm text-on-surface-variant italic" id="summary-base">Ninguna seleccionada</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Proteína</p>
+                        <p class="text-sm text-on-surface-variant italic" id="summary-protein">Ninguna seleccionada</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Salsa</p>
+                        <p class="text-sm text-on-surface-variant italic" id="summary-salsa">Ninguna seleccionada</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Acompañamientos</p>
+                        <p class="text-sm text-on-surface-variant italic" id="summary-sides">Ninguno seleccionado</p>
+                    </div>
+                </div>
+                <div class="pt-4 border-t border-outline-variant">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-sm text-on-surface-variant">Estimated Total</span>
+                        <span class="font-headline-md text-3xl text-primary" id="summary-price">$0.00</span>
+                    </div>
+                    <button id="add-to-cart-btn" class="w-full bg-primary text-on-primary py-4 text-xs font-bold tracking-widest uppercase hover:bg-secondary transition-all rounded shadow-md">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </div>
 </main>
-<!-- Footer -->
-<footer class="bg-primary text-on-primary border-t border-secondary/30 mt-24">
-<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-12 max-w-max-width mx-auto">
-<div class="mb-8 md:mb-0">
-<div class="font-headline-lg text-headline-lg text-on-primary mb-2">Cosmopolita</div>
-<p class="font-body-md text-on-primary-container">© 2024 Cosmopolita. A Global Buffet Experience.</p>
+
+<!-- Cart Sliding Drawer -->
+<div id="cart-overlay" class="fixed inset-0 bg-black/40 z-50 backdrop-blur-sm" onclick="closeCart()"></div>
+<div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-surface shadow-2xl z-50 flex flex-col border-l border-secondary/30">
+    <div class="p-6 border-b border-outline-variant flex justify-between items-center bg-background">
+        <h2 class="font-headline-md text-2xl">Your Order</h2>
+        <button onclick="closeCart()" class="p-2 hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
+        <!-- Items will be injected here -->
+        <p class="text-center text-on-surface-variant mt-10">Your cart is empty.</p>
+    </div>
+    <div class="p-6 border-t border-outline-variant bg-background">
+        <div class="flex justify-between items-center mb-4">
+            <span class="font-bold">Total</span>
+            <span class="font-headline-md text-2xl" id="cart-total">$0.00</span>
+        </div>
+        <button onclick="openCheckout()" class="w-full bg-secondary text-on-secondary py-4 text-xs font-bold tracking-widest uppercase hover:bg-primary transition-all rounded shadow-md">
+            Proceed to Checkout
+        </button>
+    </div>
 </div>
-<div class="flex flex-wrap justify-center gap-8 font-label-caps text-label-caps uppercase tracking-widest">
-<a class="text-on-primary-container hover:text-secondary transition-colors" href="#">Privacy</a>
-<a class="text-on-primary-container hover:text-secondary transition-colors" href="#">Terms</a>
-<a class="text-on-primary-container hover:text-secondary transition-colors" href="#">Contact</a>
-<a class="text-on-primary-container hover:text-secondary transition-colors" href="#">Sustainability</a>
+
+<!-- Checkout Modal -->
+<div id="checkout-modal" class="modal fixed inset-0 z-50 flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeCheckout()"></div>
+    <div class="modal-content bg-surface w-full max-w-lg p-8 rounded-xl shadow-2xl relative border border-secondary/30">
+        <button onclick="closeCheckout()" class="absolute top-4 right-4 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">close</span></button>
+        <h2 class="font-headline-md text-3xl mb-6 text-primary">Checkout</h2>
+        <form id="checkout-form" class="space-y-4">
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Name</label>
+                <input type="text" id="cust-name" required class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+            </div>
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Address</label>
+                <input type="text" id="cust-address" required class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+            </div>
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Card Details (Simulated)</label>
+                <input type="text" placeholder="4242 4242 4242 4242" required class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+            </div>
+            <button type="submit" class="w-full bg-primary text-on-primary py-4 text-xs font-bold tracking-widest uppercase hover:bg-secondary transition-all rounded shadow-md mt-6">
+                Pay <span id="checkout-total-btn"></span>
+            </button>
+        </form>
+    </div>
 </div>
+
+<!-- Admin Panel Modal -->
+<div id="admin-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeAdminModal()"></div>
+    <div class="modal-content bg-surface w-full max-w-4xl h-[80vh] flex flex-col p-6 rounded-xl shadow-2xl relative border border-secondary/50">
+        <div class="flex justify-between items-center mb-6 border-b border-outline-variant pb-4">
+            <h2 class="font-headline-md text-3xl text-primary flex items-center gap-2"><span class="material-symbols-outlined text-secondary">admin_panel_settings</span> Dashboard</h2>
+            <button onclick="closeAdminModal()" class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">close</span></button>
+        </div>
+        <div class="flex-1 overflow-y-auto space-y-4" id="admin-orders-list">
+            <!-- Orders injected here -->
+            <p class="text-center text-on-surface-variant mt-10">No orders yet.</p>
+        </div>
+    </div>
 </div>
-</footer>
-<!-- BottomNavBar (Mobile Only) -->
-<div class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center py-base px-margin-mobile bg-primary border-t border-secondary shadow-lg z-50">
-<div class="flex flex-col items-center justify-center text-on-primary/70">
-<span class="material-symbols-outlined" data-icon="home">home</span>
-<span class="font-label-caps text-[10px]">Home</span>
+
+<!-- Floating Toast Notification -->
+<div id="cosmo-toast" class="fixed bottom-6 right-6 z-[70] transform translate-y-24 opacity-0 pointer-events-none transition-all duration-500 bg-[#1e2022]/95 backdrop-blur-xl border border-[#C5A059]/50 px-6 py-4 shadow-2xl rounded-xl flex items-center gap-4 max-w-sm">
+    <div class="w-10 h-10 rounded-full bg-[#C5A059]/20 flex items-center justify-center border border-[#C5A059]/30 shrink-0">
+        <span id="cosmo-toast-icon" class="material-symbols-outlined text-[#C5A059] text-xl">verified</span>
+    </div>
+    <div>
+        <p id="cosmo-toast-title" class="text-xs font-bold text-[#C5A059] tracking-wider uppercase">NOTIFICATION</p>
+        <p id="cosmo-toast-message" class="text-sm text-white/90 mt-0.5 leading-tight">Message here.</p>
+    </div>
 </div>
-<div class="flex flex-col items-center justify-center text-secondary-fixed bg-secondary-fixed-dim/10 rounded-full p-2 scale-90">
-<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
-<span class="font-label-caps text-[10px]">Build Plate</span>
-</div>
-<div class="flex flex-col items-center justify-center text-on-primary/70">
-<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
-<span class="font-label-caps text-[10px]">Cart</span>
-</div>
-<div class="flex flex-col items-center justify-center text-on-primary/70">
-<span class="material-symbols-outlined" data-icon="person">person</span>
-<span class="font-label-caps text-[10px]">Profile</span>
-</div>
-</div>
-</body></html>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+<script>
+    // --- 1. Swiper Initialization ---
+    const swiper = new Swiper('.bases-swiper', {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        breakpoints: {
+            640: { slidesPerView: 2.2, spaceBetween: 20 },
+            1024: { slidesPerView: 3, spaceBetween: 24 }
+        }
+    });
+
+    // --- 2. Plate Builder State ---
+    const state = { base: null, protein: null, salsa: null, sides: [] };
+
+    function updateSummary() {
+        let total = 0;
+        
+        if (state.base) {
+            document.getElementById('summary-base').innerHTML = `<span class="font-bold text-on-surface not-italic">${state.base.name}</span> <span class="text-xs text-secondary-fixed-dim bg-primary px-1 rounded ml-1">${state.base.origin}</span>`;
+            total += state.base.price;
+        } else {
+            document.getElementById('summary-base').innerText = "Ninguna seleccionada";
+        }
+        
+        if (state.protein) {
+            document.getElementById('summary-protein').innerHTML = `<span class="font-bold text-on-surface not-italic">${state.protein.name}</span>`;
+            total += state.protein.price;
+        } else {
+            document.getElementById('summary-protein').innerText = "Ninguna seleccionada";
+        }
+        
+        if (state.salsa) {
+            document.getElementById('summary-salsa').innerHTML = `<span class="font-bold text-on-surface not-italic">${state.salsa.name}</span>`;
+            total += state.salsa.price;
+        } else {
+            document.getElementById('summary-salsa').innerText = "Ninguna seleccionada";
+        }
+        
+        if (state.sides.length > 0) {
+            document.getElementById('summary-sides').innerHTML = `<span class="font-bold text-on-surface not-italic">${state.sides.map(s => s.name).join(', ')}</span>`;
+            state.sides.forEach(s => total += s.price);
+        } else {
+            document.getElementById('summary-sides').innerText = "Ninguno seleccionado";
+        }
+        
+        document.getElementById('summary-price').innerText = `$${total.toFixed(2)}`;
+    }
+
+    // Handle Selection Clicks
+    document.querySelectorAll('.select-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const cat = btn.getAttribute('data-category');
+            const name = btn.getAttribute('data-name');
+            const price = parseFloat(btn.getAttribute('data-price'));
+            const origin = btn.getAttribute('data-origin') || '';
+
+            if (cat === 'base') {
+                if (state.base && state.base.name === name) state.base = null;
+                else state.base = { name, price, origin };
+                
+                document.querySelectorAll('[data-category="base"] .choice-img-wrapper').forEach(el => el.classList.remove('active-choice'));
+                if(state.base) btn.querySelector('.choice-img-wrapper').classList.add('active-choice');
+                
+            } else if (cat === 'protein') {
+                if (state.protein && state.protein.name === name) state.protein = null;
+                else state.protein = { name, price, origin };
+                
+                document.querySelectorAll('[data-category="protein"]').forEach(el => el.classList.remove('active-choice'));
+                if(state.protein) btn.classList.add('active-choice');
+                
+            } else if (cat === 'salsa') {
+                if (state.salsa && state.salsa.name === name) state.salsa = null;
+                else state.salsa = { name, price };
+                
+                document.querySelectorAll('[data-category="salsa"]').forEach(el => el.classList.remove('active-choice-bg'));
+                if(state.salsa) btn.classList.add('active-choice-bg');
+                
+            } else if (cat === 'side') {
+                const idx = state.sides.findIndex(s => s.name === name);
+                if (idx > -1) {
+                    state.sides.splice(idx, 1);
+                    btn.classList.remove('active-choice');
+                } else {
+                    if (state.sides.length >= 2) return showToast('Límite', 'Máximo 2 acompañamientos.', 'warning');
+                    state.sides.push({ name, price });
+                    btn.classList.add('active-choice');
+                }
+            }
+            updateSummary();
+        });
+    });
+
+    // --- 3. Cart Logic ---
+    let cart = JSON.parse(localStorage.getItem('cosmo_cart') || '[]');
+
+    function saveCart() {
+        localStorage.setItem('cosmo_cart', JSON.stringify(cart));
+        renderCart();
+    }
+
+    function renderCart() {
+        const badge = document.getElementById('cart-badge-nav');
+        if(cart.length > 0) {
+            badge.innerText = cart.length;
+            badge.classList.remove('hidden');
+        } else {
+            badge.classList.add('hidden');
+        }
+
+        const container = document.getElementById('cart-items');
+        let total = 0;
+        
+        if (cart.length === 0) {
+            container.innerHTML = '<p class="text-center text-on-surface-variant mt-10">Your cart is empty.</p>';
+        } else {
+            container.innerHTML = cart.map((item, idx) => {
+                let itemTotal = (item.base.price + item.protein.price + (item.salsa?item.salsa.price:0) + item.sides.reduce((a,b)=>a+b.price,0));
+                total += itemTotal;
+                return `
+                <div class="border border-outline-variant p-4 rounded-lg bg-white relative shadow-sm">
+                    <button onclick="removeFromCart(${idx})" class="absolute top-2 right-2 text-error hover:opacity-70"><span class="material-symbols-outlined text-lg">delete</span></button>
+                    <p class="font-bold text-lg mb-2">Plate ${idx+1} - <span class="text-secondary">$${itemTotal.toFixed(2)}</span></p>
+                    <p class="text-sm">🍛 ${item.base.name}</p>
+                    <p class="text-sm">🥩 ${item.protein.name}</p>
+                    ${item.salsa ? `<p class="text-sm">🥣 ${item.salsa.name}</p>` : ''}
+                    ${item.sides.length>0 ? `<p class="text-sm">🥗 ${item.sides.map(s=>s.name).join(', ')}</p>` : ''}
+                </div>`;
+            }).join('');
+        }
+        document.getElementById('cart-total').innerText = `$${total.toFixed(2)}`;
+        document.getElementById('checkout-total-btn').innerText = `$${total.toFixed(2)}`;
+    }
+
+    document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+        if (!state.base || !state.protein) return showToast('Incompleto', 'Selecciona Base y Proteína.', 'warning');
+        cart.push(JSON.parse(JSON.stringify(state)));
+        saveCart();
+        showToast('Añadido', 'Plato añadido al carrito');
+        openCart();
+    });
+
+    function removeFromCart(idx) {
+        cart.splice(idx, 1);
+        saveCart();
+    }
+
+    function openCart() { document.getElementById('cart-drawer').classList.add('open'); document.getElementById('cart-overlay').classList.add('open'); }
+    function closeCart() { document.getElementById('cart-drawer').classList.remove('open'); document.getElementById('cart-overlay').classList.remove('open'); }
+    document.getElementById('cart-nav-btn').addEventListener('click', openCart);
+    renderCart();
+
+    // --- 4. Checkout Logic ---
+    function openCheckout() {
+        if(cart.length === 0) return showToast('Error', 'Carrito vacío', 'warning');
+        closeCart();
+        document.getElementById('checkout-modal').classList.add('open');
+    }
+    function closeCheckout() { document.getElementById('checkout-modal').classList.remove('open'); }
+
+    // --- 5. Toast Notification ---
+    function showToast(title, msg, icon='verified') {
+        const t = document.getElementById('cosmo-toast');
+        document.getElementById('cosmo-toast-title').innerText = title;
+        document.getElementById('cosmo-toast-message').innerText = msg;
+        document.getElementById('cosmo-toast-icon').innerText = icon;
+        document.getElementById('cosmo-toast-icon').className = `material-symbols-outlined text-xl ${icon==='warning'?'text-[#ffdad6]':'text-[#C5A059]'}`;
+        t.style.transform = 'translateY(0)'; t.style.opacity = '1';
+        setTimeout(() => { t.style.transform = 'translateY(100px)'; t.style.opacity = '0'; }, 3000);
+    }
+
+    // --- 6. Dual-Mode Backend & Admin Logic ---
+    // Deep work implementation: works globally on GitHub pages via localStorage simulation, 
+    // but automatically connects to Socket.IO real backend if available.
+    
+    let isRealBackend = false;
+    let socket = null;
+    let localOrders = JSON.parse(localStorage.getItem('cosmo_orders') || '[]');
+
+    // Try to connect to backend
+    try {
+        socket = io('http://localhost:3001', { reconnectionAttempts: 2, timeout: 2000 });
+        socket.on('connect', () => {
+            isRealBackend = true;
+            console.log('Connected to real Node.js backend!');
+            socket.on('ordersUpdate', (orders) => renderAdminOrders(orders));
+            socket.on('orderStatusChanged', (order) => showToast('Order Update', `Order #${order.id.substring(0,4)} is now ${order.status}`));
+        });
+    } catch(e) { console.log('Socket.io failed, using Hybrid Mock Backend'); }
+
+    document.getElementById('checkout-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('cust-name').value;
+        const address = document.getElementById('cust-address').value;
+        
+        const newOrder = {
+            id: 'ORD-' + Math.random().toString(36).substr(2, 6).toUpperCase(),
+            customer: name,
+            address: address,
+            items: cart,
+            status: 'Pendiente',
+            date: new Date().toISOString()
+        };
+
+        if (isRealBackend) {
+            // Send to real backend
+            fetch('http://localhost:3001/api/orders', {
+                method: 'POST',
+                headers: {'Content-Type':'application/json'},
+                body: JSON.stringify(newOrder)
+            }).then(() => {
+                completeCheckout(newOrder.id);
+            });
+        } else {
+            // Hybrid Mock Backend Logic
+            localOrders.push(newOrder);
+            localStorage.setItem('cosmo_orders', JSON.stringify(localOrders));
+            completeCheckout(newOrder.id);
+            renderAdminOrders(localOrders);
+            
+            // Simulate progression
+            setTimeout(() => updateMockStatus(newOrder.id, 'Preparando'), 8000);
+            setTimeout(() => updateMockStatus(newOrder.id, 'Enviando'), 16000);
+        }
+    });
+
+    function completeCheckout(orderId) {
+        closeCheckout();
+        cart = [];
+        saveCart();
+        showToast('Pedido Confirmado', `Tu número de orden es ${orderId}`);
+    }
+
+    function updateMockStatus(orderId, status) {
+        if(isRealBackend) return;
+        const o = localOrders.find(x => x.id === orderId);
+        if(o) {
+            o.status = status;
+            localStorage.setItem('cosmo_orders', JSON.stringify(localOrders));
+            showToast('Actualización', `Tu orden ${orderId} está: ${status}`);
+            renderAdminOrders(localOrders);
+        }
+    }
+
+    function openAdminModal(e) {
+        if(e) e.preventDefault();
+        document.getElementById('admin-modal').classList.add('open');
+        if(!isRealBackend) renderAdminOrders(localOrders);
+    }
+    function closeAdminModal() { document.getElementById('admin-modal').classList.remove('open'); }
+
+    function renderAdminOrders(orders) {
+        const container = document.getElementById('admin-orders-list');
+        if(orders.length === 0) {
+            container.innerHTML = '<p class="text-center mt-10">No active orders.</p>';
+            return;
+        }
+        
+        // Sort newest first
+        const sorted = [...orders].reverse();
+        
+        container.innerHTML = sorted.map(o => {
+            const statusColors = {
+                'Pendiente': 'bg-red-100 text-red-800',
+                'Preparando': 'bg-yellow-100 text-yellow-800',
+                'Enviando': 'bg-blue-100 text-blue-800',
+                'Entregado': 'bg-green-100 text-green-800'
+            };
+            
+            return `
+            <div class="border border-outline-variant rounded-lg p-4 bg-white shadow-sm flex flex-col md:flex-row justify-between md:items-center gap-4">
+                <div>
+                    <p class="font-bold text-lg">${o.id} - ${o.customer}</p>
+                    <p class="text-sm text-on-surface-variant">${o.address}</p>
+                    <p class="text-xs text-on-surface-variant mt-1">${o.items.length} plates | ${new Date(o.date).toLocaleTimeString()}</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="px-3 py-1 rounded-full text-xs font-bold ${statusColors[o.status] || 'bg-gray-100'}">${o.status}</span>
+                    <select onchange="changeOrderStatus('${o.id}', this.value)" class="text-sm border-outline-variant rounded bg-surface">
+                        <option value="Pendiente" ${o.status==='Pendiente'?'selected':''}>Pendiente</option>
+                        <option value="Preparando" ${o.status==='Preparando'?'selected':''}>Preparando</option>
+                        <option value="Enviando" ${o.status==='Enviando'?'selected':''}>Enviando</option>
+                        <option value="Entregado" ${o.status==='Entregado'?'selected':''}>Entregado</option>
+                    </select>
+                </div>
+            </div>`;
+        }).join('');
+    }
+
+    window.changeOrderStatus = function(id, newStatus) {
+        if(isRealBackend) {
+            fetch(`http://localhost:3001/api/orders/${id}/status`, {
+                method: 'PATCH',
+                headers: {'Content-Type':'application/json'},
+                body: JSON.stringify({status: newStatus})
+            });
+        } else {
+            updateMockStatus(id, newStatus);
+        }
+    };
+</script>
+</body>
+</html>
