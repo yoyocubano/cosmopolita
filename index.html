@@ -15,7 +15,7 @@
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -38,12 +38,12 @@
                       "outline": "#747878"
               },
               "fontFamily": {
-                      "headline-xl": ["Bodoni Moda"],
-                      "headline-lg": ["Bodoni Moda"],
-                      "headline-md": ["Bodoni Moda"],
-                      "body-lg": ["Plus Jakarta Sans"],
-                      "body-md": ["Plus Jakarta Sans"],
-                      "label-caps": ["Plus Jakarta Sans"]
+                      "headline-xl": ["Cormorant", "serif"],
+                      "headline-lg": ["Cormorant", "serif"],
+                      "headline-md": ["Cormorant", "serif"],
+                      "body-lg": ["Montserrat", "sans-serif"],
+                      "body-md": ["Montserrat", "sans-serif"],
+                      "label-caps": ["Montserrat", "sans-serif"]
               }
             },
           },
@@ -316,7 +316,9 @@
     <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeCheckout()"></div>
     <div class="modal-content bg-surface w-full max-w-lg p-8 rounded-xl shadow-2xl relative border border-secondary/30">
         <button onclick="closeCheckout()" class="absolute top-4 right-4 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">close</span></button>
-        <h2 class="font-headline-md text-3xl mb-6 text-primary">Checkout</h2>
+        <h2 class="font-headline-md text-3xl mb-6 text-primary flex items-center gap-2">
+            Checkout <span class="text-xs bg-[#059669] text-white px-2 py-1 rounded-full ml-auto font-bold tracking-widest uppercase flex items-center gap-1"><span class="material-symbols-outlined text-sm">lock</span> Secure</span>
+        </h2>
         <form id="checkout-form" class="space-y-4">
             <div>
                 <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Name</label>
