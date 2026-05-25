@@ -2,13 +2,17 @@
 <html lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Buffet Feast - Cosmopolita</title>
+<title>Cosmopolita - Crea tu Plato</title>
 <meta property="fb:app_id" content="1234567890" />
-<meta property="og:title" content="Buffet Feast - Cosmopolita" />
-<meta property="og:description" content="Gastronomía cubana e internacional de primer nivel. Explora nuestro exquisito buffet mundial." />
-<meta property="og:image" content="./assets/image_2.jpg" />
+<meta name="description" content="Crea tu plato ideal en Cosmopolita con bases, proteínas, salsas y acompañamientos de inspiración cubana e internacional." />
+<meta property="og:title" content="Cosmopolita - Crea tu Plato" />
+<meta property="og:description" content="Diseña tu propia experiencia gastronómica en Cosmopolita con ingredientes premium." />
+<meta property="og:image" content="./assets/arroz_con_gris.webp" />
 <meta property="og:url" content="https://yoyocubano.github.io/cosmopolita/" />
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cosmopolita - Crea tu Plato">
+<meta name="twitter:description" content="Arma tu pedido con sabores cubanos e internacionales en minutos.">
+<meta name="twitter:image" content="./assets/arroz_con_gris.webp">
 
 <!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -86,8 +90,8 @@
 <nav class="bg-surface border-b border-secondary/20 flex justify-between items-center w-full px-4 md:px-16 mx-auto h-20 sticky top-0 z-40 shadow-sm">
     <div class="font-headline-md text-3xl font-semibold text-primary tracking-tighter cursor-pointer" onclick="window.scrollTo(0,0)">Cosmopolita</div>
     <div class="hidden md:flex items-center space-x-8">
-        <a class="text-secondary font-bold border-b-2 border-secondary font-body-md" href="#">Build Plate</a>
-        <a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#" onclick="openAdminModal(event)">Admin Panel</a>
+        <a class="text-secondary font-bold border-b-2 border-secondary font-body-md" href="#">Crea tu plato</a>
+        <a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#" onclick="openAdminModal(event)">Panel Admin</a>
     </div>
     <div class="flex items-center space-x-6 text-primary">
         <button id="cart-nav-btn" class="hover:opacity-80 scale-95 transition-all relative">
@@ -99,8 +103,8 @@
 
 <main class="max-w-[1280px] mx-auto px-4 md:px-16 py-8 md:py-12">
     <header class="mb-10 text-center md:text-left">
-        <h1 class="font-headline-xl text-4xl md:text-6xl text-primary mb-4">Build Your Plate</h1>
-        <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0">Curate your own global journey by selecting from our world-class ingredients.</p>
+        <h1 class="font-headline-xl text-4xl md:text-6xl text-primary mb-4">Crea tu Plato</h1>
+        <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0">Diseña tu propia experiencia gastronómica seleccionando nuestros ingredientes de clase mundial.</p>
     </header>
 
     <div class="flex flex-col lg:flex-row gap-8">
@@ -111,7 +115,7 @@
             <section>
                 <div class="flex items-center justify-between mb-6">
                     <h2 class="font-headline-md text-2xl md:text-3xl text-primary">1. Bases <span class="text-on-surface-variant opacity-60 text-lg ml-2">(Arroces)</span></h2>
-                    <span class="text-xs font-bold text-secondary-fixed-dim bg-primary px-3 py-1 uppercase tracking-widest rounded-sm">Required</span>
+                    <span class="text-xs font-bold text-secondary-fixed-dim bg-primary px-3 py-1 uppercase tracking-widest rounded-sm">Obligatorio</span>
                 </div>
                 <div class="swiper bases-swiper pb-10">
                     <div class="swiper-wrapper" id="bases-grid">
@@ -154,7 +158,7 @@
             <section>
                 <div class="flex items-center justify-between mb-6">
                     <h2 class="font-headline-md text-2xl md:text-3xl text-primary">2. Proteínas <span class="text-on-surface-variant opacity-60 text-lg ml-2">(Carnes)</span></h2>
-                    <span class="text-xs font-bold text-secondary-fixed-dim bg-primary px-3 py-1 uppercase tracking-widest rounded-sm">Required</span>
+                    <span class="text-xs font-bold text-secondary-fixed-dim bg-primary px-3 py-1 uppercase tracking-widest rounded-sm">Obligatorio</span>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="proteins-grid">
                     <button class="flex items-center justify-between gap-4 p-3 border border-outline-variant hover:border-secondary transition-all text-left rounded-lg group focus:outline-none select-btn" data-category="protein" data-name="Ropa Vieja" data-price="12.00">
@@ -162,7 +166,7 @@
                             <img class="w-16 h-16 object-cover rounded border border-outline-variant/30" src="./assets/ropa_vieja.webp"/>
                             <div>
                                 <h3 class="font-headline-md text-lg">Ropa Vieja</h3>
-                                <p class="text-sm text-on-surface-variant">Cuba</p>
+                                <p class="text-xs text-secondary-fixed-dim bg-primary px-1 rounded uppercase tracking-wider inline-block">Cuba</p>
                             </div>
                         </div>
                         <p class="text-secondary font-bold">$12.00</p>
@@ -204,7 +208,7 @@
             <section>
                 <div class="flex items-center justify-between mb-6">
                     <h2 class="font-headline-md text-2xl md:text-3xl text-primary">3. Salsas</h2>
-                    <span class="text-xs uppercase tracking-widest text-on-surface-variant opacity-60">Optional</span>
+                    <span class="text-xs uppercase tracking-widest text-on-surface-variant opacity-60">Opcional</span>
                 </div>
                 <div class="flex flex-wrap gap-3" id="salsas-grid">
                     <button class="px-6 py-2 border border-outline-variant text-xs font-bold hover:border-secondary transition-all uppercase tracking-widest rounded select-btn" data-category="salsa" data-name="Mojo criollo" data-price="1.50">Mojo (+$1.50)</button>
@@ -216,36 +220,36 @@
             <!-- Category: Acompañamientos -->
             <section>
                 <div class="flex items-center justify-between mb-6">
-                    <h2 class="font-headline-md text-2xl md:text-3xl text-primary">4. Sides</h2>
-                    <span class="text-xs font-bold text-secondary-fixed-dim bg-primary px-3 py-1 uppercase tracking-widest rounded-sm">Max 2</span>
+                    <h2 class="font-headline-md text-2xl md:text-3xl text-primary">4. Acompañamientos</h2>
+                    <span class="text-xs font-bold text-secondary-fixed-dim bg-primary px-3 py-1 uppercase tracking-widest rounded-sm">Máximo 2</span>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="sides-grid">
                     <button class="group relative aspect-square overflow-hidden border border-outline-variant rounded-lg focus:outline-none select-btn" data-category="side" data-name="Plátano frito" data-price="3.00">
                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./assets/image_1.jpg"/>
                         <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-3 transition-all">
                             <p class="text-white text-xs font-bold uppercase mb-1">Plátano frito</p>
-                            <p class="text-secondary font-bold text-sm">$3.00</p>
+                            <p class="text-secondary font-bold text-sm">+$3.00</p>
                         </div>
                     </button>
                     <button class="group relative aspect-square overflow-hidden border border-outline-variant rounded-lg focus:outline-none select-btn" data-category="side" data-name="Yuca con mojo" data-price="3.50">
                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./assets/image_6.jpg"/>
                         <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-3 transition-all">
                             <p class="text-white text-xs font-bold uppercase mb-1">Yuca con mojo</p>
-                            <p class="text-secondary font-bold text-sm">$3.50</p>
+                            <p class="text-secondary font-bold text-sm">+$3.50</p>
                         </div>
                     </button>
                     <button class="group relative aspect-square overflow-hidden border border-outline-variant rounded-lg focus:outline-none select-btn" data-category="side" data-name="Ensalada" data-price="4.00">
                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./assets/image_8.jpg"/>
                         <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-3 transition-all">
                             <p class="text-white text-xs font-bold uppercase mb-1">Ensalada</p>
-                            <p class="text-secondary font-bold text-sm">$4.00</p>
+                            <p class="text-secondary font-bold text-sm">+$4.00</p>
                         </div>
                     </button>
                     <button class="group relative aspect-square overflow-hidden border border-outline-variant rounded-lg focus:outline-none select-btn" data-category="side" data-name="Garbanzos" data-price="3.50">
                         <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./assets/image_9.jpg"/>
                         <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-3 transition-all">
                             <p class="text-white text-xs font-bold uppercase mb-1">Garbanzos</p>
-                            <p class="text-secondary font-bold text-sm">$3.50</p>
+                            <p class="text-secondary font-bold text-sm">+$3.50</p>
                         </div>
                     </button>
                 </div>
@@ -256,7 +260,7 @@
         <!-- Summary Panel (Desktop Sticky) -->
         <aside class="lg:w-[380px]">
             <div class="lg:sticky lg:top-28 gold-border bg-surface p-6 rounded-xl shadow-xl">
-                <h2 class="font-headline-md text-2xl text-primary border-b border-outline-variant pb-3 mb-5">Your Plate</h2>
+                <h2 class="font-headline-md text-2xl text-primary border-b border-outline-variant pb-3 mb-5">Resumen de Pedido</h2>
                 <div class="space-y-4 mb-6">
                     <div>
                         <p class="text-xs font-bold text-secondary uppercase tracking-widest mb-1">Base</p>
@@ -277,11 +281,11 @@
                 </div>
                 <div class="pt-4 border-t border-outline-variant">
                     <div class="flex justify-between items-center mb-4">
-                        <span class="text-sm text-on-surface-variant">Estimated Total</span>
+                        <span class="text-sm text-on-surface-variant">Total Estimado</span>
                         <span class="font-headline-md text-3xl text-primary" id="summary-price">$0.00</span>
                     </div>
-                    <button id="add-to-cart-btn" class="w-full bg-primary text-on-primary py-4 text-xs font-bold tracking-widest uppercase hover:bg-secondary transition-all rounded shadow-md">
-                        Add to Cart
+                    <button id="add-to-cart-btn" class="w-full bg-primary text-on-primary py-4 text-xs font-bold tracking-widest uppercase hover:bg-secondary transition-all rounded shadow-md disabled:bg-stone-300 disabled:text-stone-600 disabled:cursor-not-allowed disabled:hover:bg-stone-300" disabled>
+                        AÑADIR AL PEDIDO
                     </button>
                 </div>
             </div>
@@ -293,12 +297,12 @@
 <div id="cart-overlay" class="fixed inset-0 bg-black/40 z-50 backdrop-blur-sm" onclick="closeCart()"></div>
 <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-surface shadow-2xl z-50 flex flex-col border-l border-secondary/30">
     <div class="p-6 border-b border-outline-variant flex justify-between items-center bg-background">
-        <h2 class="font-headline-md text-2xl">Your Order</h2>
+        <h2 class="font-headline-md text-2xl">Tu Pedido</h2>
         <button onclick="closeCart()" class="p-2 hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined">close</span></button>
     </div>
     <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
         <!-- Items will be injected here -->
-        <p class="text-center text-on-surface-variant mt-10">Your cart is empty.</p>
+        <p class="text-center text-on-surface-variant mt-10">Tu carrito está vacío.</p>
     </div>
     <div class="p-6 border-t border-outline-variant bg-background">
         <div class="flex justify-between items-center mb-4">
@@ -306,7 +310,7 @@
             <span class="font-headline-md text-2xl" id="cart-total">$0.00</span>
         </div>
         <button onclick="openCheckout()" class="w-full bg-secondary text-on-secondary py-4 text-xs font-bold tracking-widest uppercase hover:bg-primary transition-all rounded shadow-md">
-            Proceed to Checkout
+            Finalizar Pedido
         </button>
     </div>
 </div>
@@ -317,39 +321,73 @@
     <div class="modal-content bg-surface w-full max-w-lg p-8 rounded-xl shadow-2xl relative border border-secondary/30">
         <button onclick="closeCheckout()" class="absolute top-4 right-4 text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">close</span></button>
         <h2 class="font-headline-md text-3xl mb-6 text-primary flex items-center gap-2">
-            Checkout <span class="text-xs bg-[#059669] text-white px-2 py-1 rounded-full ml-auto font-bold tracking-widest uppercase flex items-center gap-1"><span class="material-symbols-outlined text-sm">lock</span> Secure</span>
+            Confirmación <span class="text-xs bg-[#059669] text-white px-2 py-1 rounded-full ml-auto font-bold tracking-widest uppercase flex items-center gap-1"><span class="material-symbols-outlined text-sm">lock</span> Seguro</span>
         </h2>
         <form id="checkout-form" class="space-y-4">
             <div>
-                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Name</label>
-                <input type="text" id="cust-name" required class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Nombre</label>
+                <input type="text" id="cust-name" required autocomplete="name" class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
             </div>
             <div>
-                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Address</label>
-                <input type="text" id="cust-address" required class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Teléfono</label>
+                <input type="tel" id="cust-phone" required autocomplete="tel" class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
             </div>
             <div>
-                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Card Details (Simulated)</label>
-                <input type="text" placeholder="4242 4242 4242 4242" required class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Correo</label>
+                <input type="email" id="cust-email" required autocomplete="email" class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
             </div>
-            <button type="submit" class="w-full bg-primary text-on-primary py-4 text-xs font-bold tracking-widest uppercase hover:bg-secondary transition-all rounded shadow-md mt-6">
-                Pay <span id="checkout-total-btn"></span>
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Dirección</label>
+                <input type="text" id="cust-address" required autocomplete="street-address" class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Ciudad</label>
+                    <input type="text" id="cust-city" required autocomplete="address-level2" class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">CP</label>
+                    <input type="text" id="cust-zip" required autocomplete="postal-code" class="w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+                </div>
+            </div>
+            <div>
+                <label class="block text-xs font-bold uppercase tracking-widest mb-1 text-on-surface-variant">Tarjeta de Crédito</label>
+                <p class="text-[11px] text-on-surface-variant mb-2">Pasarela en modo prueba</p>
+                <div class="grid grid-cols-12 gap-3">
+                    <input type="text" placeholder="4242 4242 4242 4242" autocomplete="cc-number" required class="col-span-7 w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+                    <input type="text" placeholder="MM/AA" autocomplete="cc-exp" required class="col-span-3 w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+                    <input type="text" placeholder="CVV" autocomplete="cc-csc" required class="col-span-2 w-full border-outline-variant rounded bg-transparent focus:ring-secondary focus:border-secondary">
+                </div>
+            </div>
+            <button type="submit" class="w-full bg-[#8B6914] text-on-primary hover:bg-secondary py-4 text-xs font-bold tracking-widest uppercase transition-all rounded shadow-md mt-6">
+                Pagar <span id="checkout-total-btn"></span>
             </button>
         </form>
     </div>
 </div>
 
-<!-- Admin Panel Modal -->
+
+<!-- Success Modal -->
+<div id="success-modal" class="modal fixed inset-0 z-[55] flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeSuccessModal()"></div>
+    <div class="modal-content bg-surface w-full max-w-md p-8 rounded-xl shadow-2xl relative border border-secondary/30 text-center">
+        <h3 class="font-headline-md text-3xl text-primary mb-3">¡Pedido confirmado!</h3>
+        <p id="success-order-text" class="text-on-surface-variant mb-6"></p>
+        <button onclick="closeSuccessModal()" class="w-full bg-secondary text-on-secondary py-3 text-xs font-bold tracking-widest uppercase rounded">Entendido</button>
+    </div>
+</div>
+
+<!-- Panel Admin Modal -->
 <div id="admin-modal" class="modal fixed inset-0 z-[60] flex items-center justify-center">
     <div class="absolute inset-0 bg-black/80 backdrop-blur-md" onclick="closeAdminModal()"></div>
     <div class="modal-content bg-surface w-full max-w-4xl h-[80vh] flex flex-col p-6 rounded-xl shadow-2xl relative border border-secondary/50">
         <div class="flex justify-between items-center mb-6 border-b border-outline-variant pb-4">
-            <h2 class="font-headline-md text-3xl text-primary flex items-center gap-2"><span class="material-symbols-outlined text-secondary">admin_panel_settings</span> Dashboard</h2>
+            <h2 class="font-headline-md text-3xl text-primary flex items-center gap-2"><span class="material-symbols-outlined text-secondary">admin_panel_settings</span> Panel de Pedidos</h2>
             <button onclick="closeAdminModal()" class="text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">close</span></button>
         </div>
         <div class="flex-1 overflow-y-auto space-y-4" id="admin-orders-list">
             <!-- Orders injected here -->
-            <p class="text-center text-on-surface-variant mt-10">No orders yet.</p>
+            <p class="text-center text-on-surface-variant mt-10">No hay pedidos aún.</p>
         </div>
     </div>
 </div>
@@ -415,6 +453,10 @@
         }
         
         document.getElementById('summary-price').innerText = `$${total.toFixed(2)}`;
+        const addBtn = document.getElementById('add-to-cart-btn');
+        const canAdd = !!state.base && !!state.protein;
+        addBtn.disabled = !canAdd;
+        addBtn.innerText = canAdd ? 'AÑADIR AL PEDIDO' : 'SELECCIONA BASE Y PROTEÍNA';
     }
 
     // Handle Selection Clicks
@@ -437,7 +479,7 @@
                 else state.protein = { name, price, origin };
                 
                 document.querySelectorAll('[data-category="protein"]').forEach(el => el.classList.remove('active-choice'));
-                if(state.protein) btn.classList.add('active-choice');
+                if(state.protein) btn.classList.add('active-choice','ring-4','ring-secondary/70');
                 
             } else if (cat === 'salsa') {
                 if (state.salsa && state.salsa.name === name) state.salsa = null;
@@ -450,11 +492,11 @@
                 const idx = state.sides.findIndex(s => s.name === name);
                 if (idx > -1) {
                     state.sides.splice(idx, 1);
-                    btn.classList.remove('active-choice');
+                    btn.classList.remove('active-choice','ring-4','ring-secondary/70');
                 } else {
                     if (state.sides.length >= 2) return showToast('Límite', 'Máximo 2 acompañamientos.', 'warning');
                     state.sides.push({ name, price });
-                    btn.classList.add('active-choice');
+                    btn.classList.add('active-choice','ring-4','ring-secondary/70');
                 }
             }
             updateSummary();
@@ -462,10 +504,19 @@
     });
 
     // --- 3. Cart Logic ---
-    let cart = JSON.parse(localStorage.getItem('cosmo_cart') || '[]');
+    const CART_TTL_MS = 4 * 60 * 60 * 1000;
+    const persistedCart = JSON.parse(localStorage.getItem('cosmo_cart') || '[]');
+    const persistedAt = Number(localStorage.getItem('cosmo_cart_saved_at') || '0');
+    const isCartFresh = persistedAt && (Date.now() - persistedAt < CART_TTL_MS);
+    let cart = Array.isArray(persistedCart) && isCartFresh ? persistedCart : [];
+    if (!isCartFresh) {
+        localStorage.removeItem('cosmo_cart');
+        localStorage.removeItem('cosmo_cart_saved_at');
+    }
 
     function saveCart() {
         localStorage.setItem('cosmo_cart', JSON.stringify(cart));
+        localStorage.setItem('cosmo_cart_saved_at', String(Date.now()));
         renderCart();
     }
 
@@ -482,7 +533,7 @@
         let total = 0;
         
         if (cart.length === 0) {
-            container.innerHTML = '<p class="text-center text-on-surface-variant mt-10">Your cart is empty.</p>';
+            container.innerHTML = '<p class="text-center text-on-surface-variant mt-10">Tu carrito está vacío.</p>';
         } else {
             container.innerHTML = cart.map((item, idx) => {
                 let itemTotal = (item.base.price + item.protein.price + (item.salsa?item.salsa.price:0) + item.sides.reduce((a,b)=>a+b.price,0));
@@ -490,7 +541,7 @@
                 return `
                 <div class="border border-outline-variant p-4 rounded-lg bg-white relative shadow-sm">
                     <button onclick="removeFromCart(${idx})" class="absolute top-2 right-2 text-error hover:opacity-70"><span class="material-symbols-outlined text-lg">delete</span></button>
-                    <p class="font-bold text-lg mb-2">Plate ${idx+1} - <span class="text-secondary">$${itemTotal.toFixed(2)}</span></p>
+                    <p class="font-bold text-lg mb-2">Plato ${idx+1} - <span class="text-secondary">$${itemTotal.toFixed(2)}</span></p>
                     <p class="text-sm">🍛 ${item.base.name}</p>
                     <p class="text-sm">🥩 ${item.protein.name}</p>
                     ${item.salsa ? `<p class="text-sm">🥣 ${item.salsa.name}</p>` : ''}
@@ -506,7 +557,7 @@
         if (!state.base || !state.protein) return showToast('Incompleto', 'Selecciona Base y Proteína.', 'warning');
         cart.push(JSON.parse(JSON.stringify(state)));
         saveCart();
-        showToast('Añadido', 'Plato añadido al carrito');
+        showToast('PLATO AÑADIDO', 'Revisa tu pedido en el carrito');
         openCart();
     });
 
@@ -527,6 +578,8 @@
         document.getElementById('checkout-modal').classList.add('open');
     }
     function closeCheckout() { document.getElementById('checkout-modal').classList.remove('open'); }
+    function openSuccessModal(orderId) { document.getElementById('success-order-text').innerText = `Tu orden ${orderId} fue recibida exitosamente.`; document.getElementById('success-modal').classList.add('open'); }
+    function closeSuccessModal() { document.getElementById('success-modal').classList.remove('open'); }
 
     // --- 5. Toast Notification ---
     function showToast(title, msg, icon='verified') {
@@ -554,7 +607,7 @@
             isRealBackend = true;
             console.log('Connected to real Node.js backend!');
             socket.on('ordersUpdate', (orders) => renderAdminOrders(orders));
-            socket.on('orderStatusChanged', (order) => showToast('Order Update', `Order #${order.id.substring(0,4)} is now ${order.status}`));
+            socket.on('orderStatusChanged', (order) => showToast('Actualización', `Orden #${order.id.substring(0,4)} ahora está ${order.status}`));
         });
     } catch(e) { console.log('Socket.io failed, using Hybrid Mock Backend'); }
 
@@ -598,6 +651,7 @@
         closeCheckout();
         cart = [];
         saveCart();
+        openSuccessModal(orderId);
         showToast('Pedido Confirmado', `Tu número de orden es ${orderId}`);
     }
 
@@ -622,7 +676,7 @@
     function renderAdminOrders(orders) {
         const container = document.getElementById('admin-orders-list');
         if(orders.length === 0) {
-            container.innerHTML = '<p class="text-center mt-10">No active orders.</p>';
+            container.innerHTML = '<p class="text-center mt-10">No hay pedidos activos.</p>';
             return;
         }
         
